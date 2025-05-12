@@ -31,6 +31,7 @@ a list of strings formatted as org-mode links."
   (mapcar (lambda (pair)
             (let ((title (car pair))
                   (link (cdr pair)))
+              (format t "- [[~a][~a]]" link title)
               (format nil "- [[~a][~a]]" link title)))
           articles))
 
