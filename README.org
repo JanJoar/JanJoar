@@ -1,0 +1,10 @@
+I am a university student currently studying International Relations
+at Stockholm University. I am interested in Lisp-languages, GNU Emacs,
+Free software, political economy, and the philosophy of life in an
+increasingly technical world.
+
+Here are some recent blog posts of mine:
+
+- [[https://joarvarndt.se/end-of-history.html][The End of History.]]
+- [[https://joarvarndt.se/functional-living.html][Functional Life Without Side-Effects]]
+- [[https://joarvarndt.se/email.html][Email as a Revolutionary Medium]]
