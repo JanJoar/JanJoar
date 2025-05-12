@@ -25,8 +25,5 @@ jobs:
         run: |
           test -d '${{ steps.quicklisp.outputs.quicklisp-home }}'
           test -d '${{ steps.quicklisp.outputs.quicklisp-local-projects }}'
-  install-application:
-    runs-on: 'ubuntu-latest'
-    name: 'Install the CL Program'
-    steps:
-      - run: sbcl ./main.lisp
+      - name: 'Install the CL Program'
+        run: sbcl ./main.lisp
