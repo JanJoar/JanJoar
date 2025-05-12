@@ -1,0 +1,27 @@
+name: 'Continuous Integration'
+on:
+  - workflow_dispatch
+  - push
+
+jobs:
+  install-quicklisp-on-tier-1-platforms:
+    strategy:
+      matrix:
+        implementation: ['sbcl']
+        os: ['ubuntu-latest']
+    runs-on: '${{ matrix.os }}'
+    name: 'Install Common Lisp'
+    steps:
+      - uses: actions/checkout@v3
+      - name: 'Install MacPorts'
+      - uses: melusina-org/setup-common-lisp@v1
+        with:
+          implementation: '${{ matrix.implementation }}'
+      - uses: melusina-org/setup-quicklisp@v1
+        id: 'quicklisp'
+        with:
+          implementation: '${{ matrix.implementation }}'
+      - name: 'Validate installed implementation'
+        run: |
+          test -d '${{ steps.quicklisp.outputs.quicklisp-home }}'
+          test -d '${{ steps.quicklisp.outputs.quicklisp-local-projects }}'
