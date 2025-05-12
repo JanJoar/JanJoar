@@ -1,8 +1,9 @@
-name: 'Continuous Integration'
+name: 'Update profile'
 on:
-  - workflow_dispatch
-  - push
-
+  schedule:
+    - cron: "0 */4 * * *" # every 4 hours
+  workflow_dispatch:
+  
 jobs:
   install-quicklisp-on-tier-1-platforms:
     strategy:
