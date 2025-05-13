@@ -26,7 +26,6 @@ jobs:
           test -d '${{ steps.quicklisp.outputs.quicklisp-home }}'
           test -d '${{ steps.quicklisp.outputs.quicklisp-local-projects }}'
       - name: 'Recompiles the binary'
-        run: sbcl --load main.lisp --eval '(sb-ext:save-lisp-and-die "profile" :executable t :toplevel \'m
-ain)'
+        run: sbcl --load main.lisp --eval '(sb-ext:save-lisp-and-die "profile" :executable t :toplevel \'main)'
       - name: 'Runs the SBCL Binary'
         run: ./profile
