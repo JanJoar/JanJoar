@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/eww.html][Web browsing in Emacs]]
 - [[https://joarvarndt.se/end-of-history.html][The End of History.]]
 - [[https://joarvarndt.se/functional-living.html][Functional Life Without Side-Effects]]
-- [[https://joarvarndt.se/email.html][Email as a Revolutionary Medium]]
