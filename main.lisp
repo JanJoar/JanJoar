@@ -1,6 +1,5 @@
 (ql:quickload '(:drakma :xmls))
 
-
 (defvar template "I am a university student currently studying International Relations
 at Stockholm University. I am interested in Lisp-languages, GNU Emacs,
 Free software, political economy, and the philosophy of life in an
@@ -8,7 +7,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 ")
-
 
 (defun fetch-recent-articles (url &optional (count 3))
   "Fetch the COUNT (default 3) most recent RSS feed entries from URL and return an alist
@@ -48,4 +46,8 @@ Returns the final string."
                        :if-does-not-exist :create)
     (format str text)))
 
-(write-to-file (fill-in-template template (format-org-links (fetch-recent-articles "https://joarvarndt.se/rss.xml" 3))))
+(defun main ()
+  (write-to-file (fill-in-template template
+                                   (format-org-links (fetch-recent-articles
+                                                      "https://joarvarndt.se/rss.xml"
+                                                      3)))))
