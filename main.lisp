@@ -51,3 +51,6 @@ Returns the final string."
                                    (format-org-links (fetch-recent-articles
                                                       "https://joarvarndt.se/rss.xml"
                                                       3)))))
+
+;; Command to run for compilation:
+;; (sb-ext:save-lisp-and-die "profile" :executable t :toplevel 'main)
