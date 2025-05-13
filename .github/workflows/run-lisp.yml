@@ -26,7 +26,7 @@ jobs:
           test -d '${{ steps.quicklisp.outputs.quicklisp-home }}'
           test -d '${{ steps.quicklisp.outputs.quicklisp-local-projects }}'
       - name: Install libssl1.1
-        run: sudo apt-get install -y libssl1.1
+        run: sudo apt-get install -y libssl1.1 libc6
       # - name: 'Recompiles the binary'
       #   run: sbcl --load main.lisp --eval '(sb-ext:save-lisp-and-die "profile" :executable t :toplevel \'main)'
       - name: 'Runs the SBCL Binary'
