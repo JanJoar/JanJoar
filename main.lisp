@@ -1,7 +1,7 @@
 (ql:quickload '(:drakma :xmls))
 
-(defvar template "I am a university student currently studying International Relations
-at Stockholm University. I am interested in Lisp-languages, GNU Emacs,
+(defvar template "I am a university student currently studying political science
+at the Swedish Defence University. I am interested in Lisp-languages, GNU Emacs,
 Free software, political economy, and the philosophy of life in an
 increasingly technical world.
 
@@ -11,8 +11,9 @@ Here are some recent blog posts of mine:
 (defun fetch-recent-articles (url &optional (count 3))
   "Fetch the COUNT (default 3) most recent RSS feed entries from URL and return an alist
 mapping title to link for each article."
-  (let ((xml-string (drakma:http-request url))
-        doc channel items)
+  (let* ((response (drakma:http-request url))
+         (xml-string (octets-to-string response))
+         doc channel items)
     (setf doc (xmls:parse xml-string))
     (setf channel (first (xmls:xmlrep-find-child-tags "channel" doc)))
     (setf items (xmls:xmlrep-find-child-tags "item" channel))
@@ -47,10 +48,14 @@ Returns the final string."
     (format str text)))
 
 (defun main ()
-  (write-to-file (fill-in-template template
-                                   (format-org-links (fetch-recent-articles
-                                                      "https://joarvarndt.se/rss.xml"
-                                                      3)))))
+  (let ((recent-articles (fetch-recent-articles
+                          "https://joarvarndt.se/rss.xml"
+                          3)))
+    (format t "Recent article list: ~% ~A ~%" recent-articles)
+    (write-to-file (fill-in-template template
+                                     (format-org-links recent-articles)))))
+
+(main)
 
 ;; Command to run for compilation:
 ;; (sb-ext:save-lisp-and-die "profile" :executable t :toplevel 'main)
