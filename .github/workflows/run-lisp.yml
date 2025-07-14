@@ -40,10 +40,15 @@ jobs:
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
 
-      - name: Commit changes
+      - name: Check for changes
+        id: check_changes
         run: |
-          git add README.md
-          git commit -m "Update README with last commit date"
-          git push
+          git diff --exit-code || echo "changed"
+          
+      - name: Commit changes
+        if: steps.check_changes.outputs.changed == 'changed'
+        run: |
+          git add README.org
+          git commit -m "Update README with latest blogs"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
