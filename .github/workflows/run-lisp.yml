@@ -50,5 +50,6 @@ jobs:
         run: |
           git add README.org
           git commit -m "Update README with latest blogs"
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
