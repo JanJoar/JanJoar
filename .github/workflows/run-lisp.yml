@@ -34,5 +34,16 @@ jobs:
                --eval '(ql:quickload "xmls")' \
                --quit
 
-      - name: Run application
-        run: sbcl --load ~/.sbclrc --script main.lisp
+      - name: Update README
+        run: |
+          sbcl --load ~/.sbclrc --script main.lisp
+          git config --local user.name "github-actions"
+          git config --local user.email "github-actions@github.com"
+
+      - name: Commit changes
+        run: |
+          git add README.md
+          git commit -m "Update README with last commit date"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
