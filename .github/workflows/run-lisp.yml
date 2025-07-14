@@ -46,7 +46,7 @@ jobs:
           git diff --exit-code || echo "changed"
           
       - name: Commit changes
-        if: steps.check_changes.outputs.changed == 'changed'
+        if: steps.check_changes.outcome == 'failure'
         run: |
           git add README.org
           git commit -m "Update README with latest blogs"
