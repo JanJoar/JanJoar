@@ -24,7 +24,7 @@ jobs:
           sbcl --noinform --non-interactive \
                --load quicklisp.lisp \
                --eval '(quicklisp-quickstart:install)' \
-               --eval '(without-prompting (ql:add-to-init-file))' \
+               --eval '(ql-util:without-prompting (ql:add-to-init-file))' \
                --quit
                
       - name: Install Dependencies
