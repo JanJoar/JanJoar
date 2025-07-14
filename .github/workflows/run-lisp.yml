@@ -35,4 +35,4 @@ jobs:
                --quit
 
       - name: Run application
-        run: sbcl --script main.lisp
+        run: sbcl --load ~/.sbclrc --script main.lisp
