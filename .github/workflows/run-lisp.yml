@@ -1,33 +1,38 @@
-name: 'Update profile'
+name: Update Github Blog list
+
 on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
   schedule:
-    - cron: "0 */4 * * *" # every 4 hours
-  workflow_dispatch:
-  
+    - cron: "0 */12 * * *" # every 4 hours
+
 jobs:
-  install-quicklisp-on-tier-1-platforms:
-    strategy:
-      matrix:
-        implementation: ['sbcl']
-        os: ['ubuntu-22.04']
-    runs-on: '${{ matrix.os }}'
-    name: 'Install Common Lisp'
+  run-app:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: melusina-org/setup-common-lisp@v1
-        with:
-          implementation: '${{ matrix.implementation }}'
-      - uses: melusina-org/setup-quicklisp@v1
-        id: 'quicklisp'
-        with:
-          implementation: '${{ matrix.implementation }}'
-      - name: 'Validate installed implementation'
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install sbcl
+        run: sudo apt-get update && sudo apt-get install -y sbcl
+
+      - name: Install Quicklisp
         run: |
-          test -d '${{ steps.quicklisp.outputs.quicklisp-home }}'
-          test -d '${{ steps.quicklisp.outputs.quicklisp-local-projects }}'
-      - name: Install libssl1.1
-        run: sudo apt-get install -y libssl1.1 libc6
-       - name: 'Recompiles the binary'
-         run: sbcl --load main.lisp --eval "(sb-ext:save-lisp-and-die \"profile\" :executable t :toplevel 'main)"
-      - name: 'Runs the SBCL Binary'
-        run: ./profile
+          curl -O https://beta.quicklisp.org/quicklisp.lisp
+          sbcl --noinform --non-interactive \
+               --load quicklisp.lisp \
+               --eval '(quicklisp-quickstart:install)' \
+               --eval '(ql:add-to-init-file)' \
+               --quit
+               
+      - name: Install Dependencies
+        run: |
+          sbcl --noinform --non-interactive \
+               --eval '(ql:quickload "drakma")' \
+               --eval '(ql:quickload "xmls")' \
+               --quit
+
+      - name: Run application
+        run: sbcl --script main.lisp
