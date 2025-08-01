@@ -8,6 +8,9 @@ on:
   schedule:
     - cron: "0 */12 * * *" # every 4 hours
 
+permissions:
+  contents: write
+      
 jobs:
   run-app:
     runs-on: ubuntu-latest
