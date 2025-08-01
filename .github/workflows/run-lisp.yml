@@ -47,7 +47,7 @@ jobs:
           echo "output=$output" >> $GITHUB_ENV
           
       - name: Commit changes
-        if: env.output == 'changed'
+        if: contains(env.output, 'changed')
         run: |
           git add README.org
           git commit -m "Update README with latest blogs"
