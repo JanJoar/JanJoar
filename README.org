@@ -1,10 +1,10 @@
-I am a university student currently studying International Relations
-at Stockholm University. I am interested in Lisp-languages, GNU Emacs,
+I am a university student currently studying political science
+at the Swedish Defence University. I am interested in Lisp-languages, GNU Emacs,
 Free software, political economy, and the philosophy of life in an
 increasingly technical world.
 
 Here are some recent blog posts of mine:
 
-- [[https://joarvarndt.se/eww.html][Web browsing in Emacs]]
-- [[https://joarvarndt.se/end-of-history.html][The End of History.]]
-- [[https://joarvarndt.se/functional-living.html][Functional Life Without Side-Effects]]
+- [[https://joarvarndt.se/xuezhongwen.html][学中文]]
+- [[https://joarvarndt.se/chinese_phenomenology.html][A Phenomenology of the PRC]]
+- [[https://joarvarndt.se/deepseek.html][Deepseek is not a Chinese OpenAI]]
