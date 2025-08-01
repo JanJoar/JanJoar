@@ -44,9 +44,10 @@ jobs:
         id: check_changes
         run: |
           git diff --exit-code || echo "changed"
+          echo "output=$output" >> $GITHUB_ENV
           
       - name: Commit changes
-        if: steps.check_changes.outcome == 'changed'
+        if: env.output == 'changed'
         run: |
           git add README.org
           git commit -m "Update README with latest blogs"
