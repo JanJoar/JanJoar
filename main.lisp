@@ -1,5 +1,7 @@
 (ql:quickload '(:drakma :xmls))
 
+(defvar *rss-url* "https://joarvarndt.se/rss.xml")
+
 (defvar *template* "I am a university student currently studying political science
 at the Swedish Defence University. I am interested in Lisp-languages, GNU Emacs,
 Free software, political economy, and the philosophy of life in an
@@ -7,6 +9,8 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 ")
+
+(defvar *article-count* 3)
 
 (defun fetch-recent-articles (url &optional (count 3))
   "Fetch the COUNT (default 3) most recent RSS feed entries from URL and return an alist
@@ -49,8 +53,8 @@ Returns the final string."
 
 (defun main ()
   (let ((recent-articles (fetch-recent-articles
-                          "https://joarvarndt.se/rss.xml"
-                          3)))
+                          *rss-url*
+                          *article-count*)))
     (format t "Recent article list: ~% ~A ~%" recent-articles)
     (write-to-file (fill-in-template *template*
                                      (format-org-links recent-articles)))))
