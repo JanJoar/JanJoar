@@ -1,6 +1,6 @@
 (ql:quickload '(:drakma :xmls))
 
-(defvar template "I am a university student currently studying political science
+(defvar *template* "I am a university student currently studying political science
 at the Swedish Defence University. I am interested in Lisp-languages, GNU Emacs,
 Free software, political economy, and the philosophy of life in an
 increasingly technical world.
@@ -52,7 +52,7 @@ Returns the final string."
                           "https://joarvarndt.se/rss.xml"
                           3)))
     (format t "Recent article list: ~% ~A ~%" recent-articles)
-    (write-to-file (fill-in-template template
+    (write-to-file (fill-in-template *template*
                                      (format-org-links recent-articles)))))
 
 (main)
