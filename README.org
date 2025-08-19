@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/learning-priorities.html][Don't Prioritised What to Learn]]
 - [[https://joarvarndt.se/DigitalLand.html][Land Value in the Digital Realm]]
 - [[https://joarvarndt.se/cl-workflows.html][Common lisp and Github workflows]]
-- [[https://joarvarndt.se/xuezhongwen.html][学中文]]
