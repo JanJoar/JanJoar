@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/social-email.html][Email as social media]]
 - [[https://joarvarndt.se/technique.html][What is Technique?]]
 - [[https://joarvarndt.se/learning-priorities.html][Don't Prioritise What to Learn]]
-- [[https://joarvarndt.se/DigitalLand.html][Land Value in the Digital Realm]]
