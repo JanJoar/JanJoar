@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/productive-notes.html][Productive Note-taking]]
 - [[https://joarvarndt.se/decentralized-machines.html][Decentralized Personal Computing]]
 - [[https://joarvarndt.se/consuming-media.html][Healthy Media Habits]]
-- [[https://joarvarndt.se/european-tech.html][On Attaining European Technological Sovereignty]]
