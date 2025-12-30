@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/text.html][On Text ]]
 - [[https://joarvarndt.se/beginner-diplomacy.html][A Beginner Guide to Diplomacy]]
 - [[https://joarvarndt.se/xournal-emacs.html][Handwritten notes in Emacs using Xournal++]]
-- [[https://joarvarndt.se/productive-notes.html][Productive Note-taking]]
