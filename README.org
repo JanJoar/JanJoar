@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/state.html][The Qualities of the Totalitarian State]]
 - [[https://joarvarndt.se/latex.html][Making Beautiful Documents in LaTeX]]
 - [[https://joarvarndt.se/text.html][On Text ]]
-- [[https://joarvarndt.se/beginner-diplomacy.html][A Beginner Guide to <i>Diplomacy</i>]]
