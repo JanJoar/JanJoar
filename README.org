@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
-- [[https://joarvarndt.se/exp.html][Exponentials and Artificial Intelligence]]
 - [[https://joarvarndt.se/crypto.html][Three Thoughts On Crypto and NFTs]]
 - [[https://joarvarndt.se/state.html][The Qualities of the Totalitarian State]]
+- [[https://joarvarndt.se/exp.html][Exponentials and Artificial Intelligence]]
