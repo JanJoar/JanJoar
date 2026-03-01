@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/free-vibes.html][Vibe-coding Brings the Power of Emacs to Everything]]
 - [[https://joarvarndt.se/pluribus.html][Pluribus & Alienation]]
 - [[https://joarvarndt.se/exp.html][Exponentials and Artificial Intelligence]]
-- [[https://joarvarndt.se/crypto.html][Three Thoughts On Crypto and NFTs]]
