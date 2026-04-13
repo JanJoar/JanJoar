@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/post-historical-society.html][All is Right With the World]]
 - [[https://joarvarndt.se/fusion.html][The Trouble with Fusion: Nuclear Fusion Will Not Give Us Infinite Power]]
 - [[https://joarvarndt.se/trust.html][Trust: Or the Liberating Fear of Betrayal]]
-- [[https://joarvarndt.se/russia.html][Russia is Not a Great Power]]
