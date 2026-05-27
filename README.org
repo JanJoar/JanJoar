@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/art.html][The Nature of Art]]
 - [[https://joarvarndt.se/post-historical-society.html][All is Right With the World]]
 - [[https://joarvarndt.se/fusion.html][The Trouble with Fusion: Nuclear Fusion Will Not Give Us Infinite Power]]
-- [[https://joarvarndt.se/trust.html][Trust: Or the Liberating Fear of Betrayal]]
