@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/mu4e-wkd.html][Automatically Find PGP Keys in Mu4e]]
 - [[https://joarvarndt.se/eccentricity.html][The Kramer-Peterman Duality: Fragments on Eccentricity]]
 - [[https://joarvarndt.se/art.html][The Nature of Art]]
-- [[https://joarvarndt.se/post-historical-society.html][All is Right With the World]]
