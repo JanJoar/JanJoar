@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/taiwan-food.html][Taiwan Treats]]
 - [[https://joarvarndt.se/adversity.html][Security Studies for Individuals]]
 - [[https://joarvarndt.se/mu4e-wkd.html][Automatically Find PGP Keys in Mu4e]]
-- [[https://joarvarndt.se/eccentricity.html][The Kramer-Peterman Duality: Fragments on Eccentricity]]
