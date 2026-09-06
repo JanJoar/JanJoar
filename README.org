@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/emacs-lsp.html][Emacs does not need LSP]]
 - [[https://joarvarndt.se/free-vibes-2.html][Being Against LLMs is Against the Spirit of FLOSS]]
 - [[https://joarvarndt.se/daan-dawn.html][Dawn in 大安]]
-- [[https://joarvarndt.se/adversity.html][Security Studies for Individuals]]
