@@ -5,6 +5,6 @@ increasingly technical world.
 
 Here are some recent blog posts of mine:
 
+- [[https://joarvarndt.se/style.html][A Style Guide]]
 - [[https://joarvarndt.se/american-suez.html][On an American Suez]]
 - [[https://joarvarndt.se/cyber.html][Hardening up: How does advanced AI impact cybersecurity?]]
-- [[https://joarvarndt.se/emacs-lsp.html][Emacs does not need LSP]]
